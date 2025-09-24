@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      background-color: #ffbfdb;
+    }
+
+    header {
+      background-color: #231f20;
+      color: #ffbfdb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+    }
+
+    .logo-header {
+  width: 150px;   
+  height: auto;   
+}
+
+    h1 {
+      color: #d40075;
+    }
+
+    h2 {
+      color: #d40075;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00bdda;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  
+    main {
+    padding: 1.5rem;
+  }
+
+
+  .trailer-video {
+    display: block;
+    width: 85%;      
+    height: auto;    
+    margin: 0 auto;  
+    border-radius: 12px; 
+    margin: 40px auto 0 auto; 
+  }
+
+  .slogan-container {
+    text-align: center;      
+    margin: 50px 0;          
+  }
+
+  .slogan-container h1 {
+    font-size: 3rem;         
+    font-weight: bold;       
+    color: #d40075;          
+    letter-spacing: 2px;     
+    line-height: 1.2;        
+  }
+
+  /*Responsiv für kleinere Bildschirme */
+  @media (max-width: 768px) {
+    .slogan-container h1 {
+      font-size: 2rem;       /* kleiner auf Handys */
+    }
+  }
+
+  .Ankündigung-block {
+    display: flex;
+    align-items: center; /* Text und Bild vertikal auf gleicher Höhe */
+    gap: 2rem;           /* Abstand zwischen Text und Bild */
+    padding: 1.5rem;
+  }
+
+  .text-block {
+    flex: 1;             /* Text nimmt den verfügbaren Platz ein */
+  }
+
+  .image-block img {
+    width: 250px;        /* Bildbreite anpassen */
+    height: auto;
+    display: block;
+  }
+
+  /* Optional: responsive für kleine Bildschirme */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;  /* stapelt Text über Bild auf kleinen Bildschirmen */
+      text-align: center;
+    }
+
+    .image-block img {
+      width: 150px;
+    }
+  }
+
+.karte {
+    text-align: center; /* zentriert die Überschrift */
+    padding: 2rem 1rem;
+  }
+
+  .map-section h1 {
+    margin-bottom: 1rem;
+  }
+
+  /* Optional: responsive Karte */
+  @media (max-width: 768px) {
+    .map-section iframe {
+      width: 100%;
+    }
+  }
+
+  .day-section {
+  margin: 2rem 0; /* Abstand zwischen den Tagen */
+}
+
+.day-section h2 {
+  margin-bottom: 1rem;
+  text-align: center; /* optional, falls du die Überschrift zentrieren willst */
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.film-card {
+  background: #00bdda;
+  border: 1px solid #d40075;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.film-card img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;  /* sorgt für horizontale Zentrierung */
+}
+
+.film-card p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
