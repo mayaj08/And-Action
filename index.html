@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <link rel="icon" type="image/x-icon" href="bildervideos/favicon.svg">
     <title>And Action!</title>
     <meta name="description" content="Kurzbeschreibung der Seite." />
 
@@ -22,51 +22,78 @@
   <body>
     
   
-    <header>
-      <img src="bildervideos/And-Action-Logo.png" alt="Logo" class="logo-header">
-    <nav>
-      <ul>
-        <li><a href="#home">Ankündigung</a></li>
-        <li><a href="info">Infos</a></li>
-        <li><a href="#about">Gelände</a></li>
-        <li><a href="#services">Programm</a></li>
-        <li><a href="#contact">Sponsoren</a></li>
-      </ul>
-    </nav>
-    </header>
-    
-    <video class="trailer-video" autoplay muted loop>
-    <source src="bildervideos/platzhalter.mp4" type="video/mp4">
-  </video>
+   <header>
+  <img src="bildervideos/And-Action-Logo.png" alt="Logo" class="logo-header">
+
+  <button class="hamburger" aria-label="Menü öffnen/schließen">
+    ☰
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Ankündigung</a></li>
+      <li><a href="#about">Gelände</a></li>
+      <li><a href="#services">Programm</a></li>
+      <li><a href="#contact">Sponsoren</a></li>
+    </ul>
+  </nav>
+</header>
+
+
     
     <main>
-      <div class="slogan-container">
-        <h1>"Wo Filme leben."</h1>
-      </div>
-      
+    <div class="slogan-container">
+      <h1>"Wo Filme leben."</h1>
+    </div>
+
+    <div class="video-wrapper">
+  <iframe 
+    class="trailer-video"
+    src="https://www.youtube.com/embed/RbtYTJqGiIg?si=adu6Q8fPObUMw3sz"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+    </iframe>
+   
+</div>
+
+<section id="home">
   <div class="Ankündigung-block">
   <div class="text-block">
     <h1>Ankündigung</h1>
     <p>Willkommen zum And Action Filmfest von Arena Cinemas, Sihlcity und der Stadt Zürich.</p>
     <p>Infos:</p>
     <p>Filmfestival Sihlcity</p>
-    <p>xx.xx.xx - xx.xx.xx </p>
+    <p>08.09.26 - 14.09.26 </p>
   </div>
   <div class="image-block">
-    <img src="bildervideos/And-Action-Logo.png" alt="And Action Logo">
+    <img src="bildervideos/Plakat.png" alt="And Action Logo">
   </div>
 </div>
+</section>
 
-<div class="karte">
-  <h1 >Gelände</h1>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.7769569045413!2d8.520485511471882!3d47.35775240500891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479009f1d5a785e1%3A0xedb469258c9a3617!2sSihlcity!5e0!3m2!1sde!2sch!4v1758542755942!5m2!1sde!2sch" width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+
+
+<section id="about">
+ <div class="karte">
+        <h1>Gelände</h1>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.7769569045413!2d8.520485511471882!3d47.35775240500891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479009f1d5a785e1%3A0xedb469258c9a3617!2sSihlcity!5e0!3m2!1sde!2sch!4v1758542755942!5m2!1sde!2sch" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
 
  
-
+<section id="services">
 <!-- Montag -->
 <section class="day-section">
-  <h2>Montag</h2>
+  <h2>MO</h2>
   <div class="film-grid">
     <div class="film-card">
       <img src="bildervideos/verdingbub.jpg" alt="Film 1 Cover">
@@ -88,7 +115,7 @@
 
 <!-- Dienstag -->
 <section class="day-section">
-  <h2>Dienstag</h2>
+  <h2>DI</h2>
   <div class="film-grid">
     <div class="film-card">
       <img src="bildervideos/booksmart.jpg" alt="Film 3 Cover">
@@ -111,7 +138,7 @@
 
 <!-- Mittwoch -->
 <section class="day-section">
-  <h2>Mittwoch</h2>
+  <h2>MI</h2>
   <div class="film-grid">
     <div class="film-card">
       <img src="bildervideos/revenant.jpg" alt="Film 5 Cover">
@@ -133,7 +160,7 @@
 
 <!-- Donnerstag -->
 <section class="day-section">
-  <h2>Donnerstag</h2>
+  <h2>DO</h2>
   <div class="film-grid">
     <div class="film-card">
       <img src="bildervideos/toalltheboysivelovedbefore.jpg" alt="Film 7 Cover">
@@ -154,14 +181,14 @@
 
 <!-- Freitag -->
 <section class="day-section">
-  <h2>Freitag</h2>
+  <h2>FR</h2>
   <div class="film-grid">
     <div class="film-card">
       <img src="bildervideos/missionimpossible.jpg" alt="Film 9 Cover">
       <p>19:30</p>
       <p>Mission: Impossible – Fallout</p>
       <p>Regie: Christopher McQuarrie</p>
-      <p>Tom Cruise (Ethan Hunt), Henry Cavill, Rebecca Ferguson</p>
+      <p>Hauptdarsteller: Tom Cruise (Ethan Hunt), Henry Cavill, Rebecca Ferguson</p>
     </div>
 
     <div class="film-card">
@@ -173,13 +200,41 @@
     </div>
   </div>
 </section>
+</section>
 
+<section id="services">
+<section class="sponsor-section">
+  <h1>Sponsoren</h1>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <img src="bildervideos/arena-cinemas-seeklogo.svg" alt="Sponsor 1 Logo">
+    </div>
+    <div class="sponsor-card">
+      <img src="bildervideos/Sihlcity-Logo.svg" alt="Sponsor 2 Logo">
+    </div>
+    <div class="sponsor-card">
+      <img src="bildervideos/CHE_Zürich_Logo.svg" alt="Sponsor 3 Logo">
+    </div>
+  </div>
+</section>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  });
+</script>
 </main>
 
 
-    <footer>
-
-    </footer>
+<footer class="site-footer">
+  <p>&copy; 2025 And Action! Filmfestival</p>
+</footer>
 
    
   </body>

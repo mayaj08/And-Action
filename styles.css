@@ -1,173 +1,292 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-      margin: 0;
-      font-family: "Roboto", sans-serif;
-      background-color: #ffbfdb;
-    }
-
-    header {
-      background-color: #231f20;
-      color: #ffbfdb;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 3rem;
-    }
-
-    .logo-header {
-  width: 150px;   
-  height: auto;   
+html {
+    scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
-    h1 {
-      color: #d40075;
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #ffbfdb;
+}
+
+header {
+    background-color: #231f20;
+    color: #ffbfdb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.logo-header {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hamburger Button Standard versteckt */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #00bdda;
+    cursor: pointer;
+}
+
+/* Ab Tablet: Hamburger sichtbar, Nav versteckt */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        width: 100%;
+        background: #231f20;
     }
 
-    h2 {
-      color: #d40075;
-    }
-
-    .logo {
-      font-size: 1.25rem;
-      font-weight: bold;
+    nav.open {
+        display: block; /* sichtbar, wenn per JS geöffnet */
     }
 
     nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #00bdda;
-      font-weight: bold;
+    .hamburger {
+        display: block;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-  
-    main {
-    padding: 1.5rem;
-  }
-
-
-  .trailer-video {
-    display: block;
-    width: 85%;      
-    height: auto;    
-    margin: 0 auto;  
-    border-radius: 12px; 
-    margin: 40px auto 0 auto; 
-  }
-
-  .slogan-container {
-    text-align: center;      
-    margin: 50px 0;          
-  }
-
-  .slogan-container h1 {
-    font-size: 3rem;         
-    font-weight: bold;       
-    color: #d40075;          
-    letter-spacing: 2px;     
-    line-height: 1.2;        
-  }
-
-  /*Responsiv für kleinere Bildschirme */
-  @media (max-width: 768px) {
-    .slogan-container h1 {
-      font-size: 2rem;       /* kleiner auf Handys */
-    }
-  }
-
-  .Ankündigung-block {
-    display: flex;
-    align-items: center; /* Text und Bild vertikal auf gleicher Höhe */
-    gap: 2rem;           /* Abstand zwischen Text und Bild */
-    padding: 1.5rem;
-  }
-
-  .text-block {
-    flex: 1;             /* Text nimmt den verfügbaren Platz ein */
-  }
-
-  .image-block img {
-    width: 250px;        /* Bildbreite anpassen */
-    height: auto;
-    display: block;
-  }
-
-  /* Optional: responsive für kleine Bildschirme */
-  @media (max-width: 768px) {
     .content-wrapper {
-      flex-direction: column;  /* stapelt Text über Bild auf kleinen Bildschirmen */
-      text-align: center;
+        flex-direction: column;  /* stapelt Text über Bild */
+        text-align: center;
     }
 
     .image-block img {
-      width: 150px;
+        width: 150px;
     }
-  }
+}
 
+h1, h2 {
+    color: #d40075;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00bdda;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+/* Slogan Container */
+.slogan-container {
+    background-image: url("bildervideos/bildlandingpage1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan-container h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Abstände nach Slogan und Ankündigung */
+.slogan-container + .video-wrapper {
+    margin-top: 40px; /* Abstand nach Slogan */
+}
+
+.Ankündigung-block + .video-wrapper {
+    margin-top: 40px; /* Abstand nach Ankündigung */
+}
+
+/* Ankündigung-Block */
+.Ankündigung-block {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 40px; /* Abstand unter Ankündigung */
+}
+
+.text-block {
+    flex: 1;
+}
+
+.image-block img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;   /* zentriert */
+    padding-bottom: 56.25%; /* 16:9 Verhältnis */
+    height: 0;
+}
+
+.video-wrapper iframe.trailer-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* Karte */
 .karte {
-    text-align: center; /* zentriert die Überschrift */
+    text-align: center;
     padding: 2rem 1rem;
-  }
+}
 
-  .map-section h1 {
-    margin-bottom: 1rem;
-  }
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    height: 0;
+}
 
-  /* Optional: responsive Karte */
-  @media (max-width: 768px) {
-    .map-section iframe {
-      width: 100%;
-    }
-  }
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
 
-  .day-section {
-  margin: 2rem 0; /* Abstand zwischen den Tagen */
+/* Film-Tage */
+.day-section {
+    margin: 2rem 0;
 }
 
 .day-section h2 {
-  margin-bottom: 1rem;
-  text-align: center; /* optional, falls du die Überschrift zentrieren willst */
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .film-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .film-card {
-  background: #00bdda;
-  border: 1px solid #d40075;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 1rem;
+    background: #00bdda;
+    border: 1px solid #d40075;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1rem;
 }
 
 .film-card img {
-  width: 70%;
-  height: auto;
-  display: block;
-  margin: 0 auto;  /* sorgt für horizontale Zentrierung */
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .film-card p {
-  margin: 10px 0 0;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
+    margin: 10px 0 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
 }
 
+/* Sponsor Section */
+.sponsor-section {
+    margin: 3rem 0;
+    text-align: center;
+}
 
+.sponsor-section h1 {
+    color: #d40075;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    padding: 0 20px;
+}
+
+.sponsor-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-card img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #d40075;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .film-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Ankündigung-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-block img {
+        width: 150px;
+    }
+}
